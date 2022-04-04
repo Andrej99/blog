@@ -1,0 +1,15 @@
+
+<nav [class.scrolled]="scroll" (window:scroll) = "onScrooll()" >
+<div class="container-nav">
+    <h1>{{title}}</h1>
+
+    <div>
+    <a routerLink="/main">Main</a>
+    <a routerLink="/posts">Posts</a>
+</div>
+</div>
+
+</nav>
+<div class="container">
+<router-outlet></router-outlet>
+</div>

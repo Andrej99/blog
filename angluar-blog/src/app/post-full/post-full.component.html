@@ -1,0 +1,10 @@
+
+<div *ngIf="post;else ee" >
+    <div class="post-header">
+        <a (click)="goBack()">Back</a>
+        <h2>{{post.title}}</h2>
+    </div>
+    <p>{{post.content}}</p>
+
+</div>
+<ng-template #ee>Can't find article!</ng-template>

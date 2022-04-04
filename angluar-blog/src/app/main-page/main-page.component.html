@@ -1,0 +1,35 @@
+
+<div *ngIf="posts">
+
+<article *ngIf="top_post"    class="featured-post" >
+   <div class="img-placeholder-featured" routerLink="/post/{{posts[0]._id}}"></div>
+   <div class = "text-block-featured"> 
+    <div>
+    <h2 routerLink="/post/{{top_post._id}}">{{top_post!.title}}</h2>
+    <br>
+        <p>{{top_post!.description}}</p>
+    </div>
+    <p class="author"><b>{{top_post!.author}} &bull;   </b>    <i>{{top_post!.date|date}}</i></p>   
+    </div>
+</article>
+
+<div class="posts">
+<article *ngFor="let post of posts" class="post">
+    <div class="img-placeholder" routerLink="/post/{{post._id}}"></div>
+    <div class = "text-block"> 
+     <div>
+     <h2 routerLink="/post/{{post._id}}">{{post.title}}</h2>
+     <br>
+         <p>{{post.description}}</p>
+     </div>
+     <p class="author"><b>{{post.author}} &bull;   </b>    <i>{{post.date|date}}</i></p>   
+     </div>
+</article>
+
+</div>
+
+
+
+
+</div>
+
